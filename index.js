@@ -1,7 +1,7 @@
 import { prompt } from "./prompt.js";
 
 const LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-const UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const UPPERCASE = LOWERCASE.toUpperCase();
 const SPECIALS = "!@#$%^&*()";
 const NUMBERS = "0123456789";
 
@@ -39,7 +39,7 @@ const askNumbers = () => {
 };
 
 const askUppercase = () => {
-  const upperCase = prompt("Do you want uppercase ? (y/n)");
+  const upperCase = prompt("Do you want uppercase characters ? (y/n)");
   if (upperCase === "y") {
     return true;
   } else if (upperCase === "n") {
